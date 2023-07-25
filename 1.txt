@@ -1,0 +1,4 @@
+-- git init (only once in the same folder)
+-- git status
+-- git add .
+-- git commit -m "committed"
