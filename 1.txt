@@ -4,3 +4,17 @@
 -- git commit -m "committed"
 -- git remote add origin git@github.com:Oshinn007/Sample-Project.git
 -- git push -u origin master
+
+ git branch pikachu1
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git branch
+* master
+  pikachu1
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git checkout pikachu1
+Switched to branch 'pikachu1'
+
+Hp@BarunS MINGW64 /d/Project Sample (pikachu1)
+$
