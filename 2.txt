@@ -1,0 +1,140 @@
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git commit -m "commit2"
+fatal: Unable to create 'D:/Project Sample/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ del index.lock
+bash: del: command not found
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ rm -f D:/Project\ Sample/.git/index.lock
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git commit -m "commit2"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git add .
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git commit -m "commit3"
+[master 168d1b4] commit3
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:Oshinn007/Sample-Project.git'
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git push -u origin master
+The authenticity of host 'github.com (20.205.243.166)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 805 bytes | 402.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:Oshinn007/Sample-Project.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git add .
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git commit -m "commit4"
+[master e6284b7] commit4
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 322 bytes | 322.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Oshinn007/Sample-Project.git
+   168d1b4..e6284b7  master -> master
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git branch pikachu1
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git branch
+* master
+  pikachu1
+
+Hp@BarunS MINGW64 /d/Project Sample (master)
+$ git checkout pikachu1
+Switched to branch 'pikachu1'
+
+Hp@BarunS MINGW64 /d/Project Sample (pikachu1)
+$  clip < ~/.ssh/id_ed25519.pub^C
+
+Hp@BarunS MINGW64 /d/Project Sample (pikachu1)
+$
